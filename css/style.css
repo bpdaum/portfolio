@@ -722,3 +722,68 @@ footer {
         text-align: center;
     }
 }
+
+/* Special Card Styles */
+.hof-card {
+    position: relative;
+    /* Gradient from transparent (showing image) on left to card-bg color on right */
+    /* Adjusted to be solid earlier for readability */
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, var(--card-bg) 40%), url('../assets/images/yankee_stadium_swing.png');
+    background-size: cover;
+    background-position: left center;
+    background-repeat: no-repeat;
+    /* Ensure text is readable and card has size */
+}
+
+/* Dark mode adjustment for the gradient */
+body.dark-mode .hof-card {
+    background-image: linear-gradient(to right, rgba(30, 41, 59, 0) 0%, var(--card-bg) 40%), url('../assets/images/yankee_stadium_swing.png');
+}
+
+.hof-card .project-info {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    /* Push text to the right side where the background is solid */
+    padding-left: 45%;
+}
+
+/* Specific button overrides for visibility on light/card-bg */
+.hof-card .project-links .btn-outline {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.hof-card .project-links .btn-outline:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Dark mode button overrides */
+body.dark-mode .hof-card .project-links .btn-outline {
+    color: var(--text-color);
+    border-color: var(--text-color);
+}
+
+body.dark-mode .hof-card .project-links .btn-outline:hover {
+    background: var(--text-color);
+    color: var(--card-bg);
+}
+
+@media (max-width: 768px) {
+    .hof-card {
+        /* Mobile: Image on top, gradient to bottom */
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 20%, var(--card-bg) 60%), url('../assets/images/yankee_stadium_swing.png');
+        background-position: center top;
+    }
+
+    body.dark-mode .hof-card {
+        background-image: linear-gradient(to bottom, rgba(30, 41, 59, 0) 20%, var(--card-bg) 60%), url('../assets/images/yankee_stadium_swing.png');
+    }
+
+    .hof-card .project-info {
+        padding-left: 1.5rem;
+        padding-top: 250px;
+        /* Space for image */
+    }
+}
