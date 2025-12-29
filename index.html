@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfolio of Brian Daum, Data Scientist. showcasing projects in machine learning, data analysis, and AI.">
+    <title>Brian Daum | Data Scientist</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Brian Daum<span class="dot">.</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="#contact" class="btn-primary">Contact</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 class="fade-in">People<br>
+                    <span class="txt-rotate-wrap">
+                        <span class="txt-rotate" id="job-titles">Data Scientist</span>
+                    </span>
+                </h1>
+                <p class="fade-in delay-1">I turn complex data into actionable insights. Specializing in machine
+                    learning,
+                    predictive modeling, and data visualization.</p>
+                <div class="hero-btns fade-in delay-2">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                </div>
+            </div>
+            <div class="hero-socials fade-in delay-2">
+                <div class="hero-image-container">
+                    <img src="assets/images/headshot.jpg" alt="Brian Daum" class="hero-headshot">
+                </div>
+                <div class="social-buttons-grid">
+                    <a href="mailto:bpdaum@gmail.com" class="social-btn">
+                        <i class="fas fa-envelope"></i> Email
+                    </a>
+                    <a href="assets/documents/Brian_Daum_Resume.pdf" class="social-btn" download>
+                        <i class="fas fa-file-pdf"></i> Resume
+                    </a>
+                    <a href="https://linkedin.com/in/briandaum" target="_blank" class="social-btn">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com/bpdaum" target="_blank" class="social-btn">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-bg-accent"></div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <div class="line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hello! I'm Brian, a passionate Data Scientist based in Austin, TX. With a strong foundation in
+                        statistics and computer science, I love exploring the stories hidden within data.</p>
+                    <p>My journey involves working on diverse projects ranging from natural language processing to
+                        customer churn prediction. I am dedicated to building robust data pipelines and model
+                        architectures that drive business value.</p>
+                    <div class="skills-grid">
+                        <div class="skill-item"><i class="fab fa-python"></i> Python</div>
+                        <div class="skill-item"><i class="fas fa-database"></i> SQL</div>
+                        <div class="skill-item"><i class="fas fa-brain"></i> Machine Learning</div>
+                        <div class="skill-item"><i class="fas fa-network-wired"></i> Deep Learning</div>
+                        <div class="skill-item"><i class="fas fa-language"></i> NLP</div>
+                        <div class="skill-item"><i class="fas fa-chart-line"></i> Time Series</div>
+                        <div class="skill-item"><i class="fas fa-robot"></i> LLMs</div>
+                        <div class="skill-item"><i class="fas fa-infinity"></i> CI/CD</div>
+                        <div class="skill-item"><i class="fas fa-users"></i> HR Domain Knowledge</div>
+                        <div class="skill-item"><i class="fas fa-handshake"></i> Consulting</div>
+                        <div class="skill-item"><i class="fas fa-chalkboard-user"></i> Presentation Skills</div>
+                        <div class="skill-item"><i class="fas fa-chalkboard-teacher"></i> Supervised Learning</div>
+                        <div class="skill-item"><i class="fas fa-shapes"></i> Unsupervised Learning</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <div class="line"></div>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <!-- Placeholder -->
+                        <div class="img-placeholder"
+                            style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Predicting the next baseball hall of fame class</h3>
+                        <p>A machine learning project using XGBoost to predict future Hall of Fame inductees based on
+                            career statistics.</p>
+                        <div class="tags">
+                            <span>Python</span>
+                            <span>XGBoost</span>
+                            <span>Binary Classification</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="assets/code/baseball_hof_prediction.ipynb" download><i class="fab fa-github"></i>
+                                Code/Notebook</a>
+                            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume-section">
+        <div class="container">
+            <div class="resume-content">
+                <h2>Interested in my full history?</h2>
+                <p>View my resume to see a detailed account of my experience, education, and skills.</p>
+                <a href="resume.html" class="btn btn-outline" target="_blank">View Resume <i
+                        class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact/Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <h3>Brian Daum</h3>
+                    <p>Data Scientist</p>
+                </div>
+                <div class="footer-right">
+                    <div class="social-links">
+                        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/bpdaum" target="_blank" aria-label="GitHub"><i
+                                class="fab fa-github"></i></a>
+                        <a href="mailto:bpdaum@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Brian Daum. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

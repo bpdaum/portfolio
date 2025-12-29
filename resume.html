@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brian Daum - Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --secondary: #3b82f6;
+            --text: #334155;
+            --light-text: #64748b;
+            --bg: #f8fafc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.5;
+            padding: 40px 20px;
+        }
+
+        .resume-container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: white;
+            padding: 60px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        /* Header */
+        header {
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .header-left h1 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .header-left h2 {
+            font-size: 1.2rem;
+            color: var(--secondary);
+            font-weight: 500;
+        }
+
+        .header-right {
+            text-align: right;
+            font-size: 0.9rem;
+            color: var(--light-text);
+        }
+
+        .header-right div {
+            margin-bottom: 5px;
+        }
+
+        .header-right i {
+            width: 20px;
+            color: var(--primary);
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary);
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .job {
+            margin-bottom: 25px;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .job-title {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.05rem;
+        }
+
+        .company {
+            font-weight: 500;
+            color: var(--text);
+        }
+
+        .job-date {
+            color: var(--light-text);
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+
+        .job-location {
+            color: var(--light-text);
+            font-size: 0.85rem;
+        }
+
+        .job-desc {
+            font-size: 0.95rem;
+            color: #475569;
+            margin-bottom: 10px;
+        }
+
+        .job-skills {
+            font-size: 0.85rem;
+            color: var(--secondary);
+            background: #f1f5f9;
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 4px;
+        }
+
+        /* Education */
+        .education-item {
+            margin-bottom: 15px;
+        }
+
+        /* Skills */
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: #eff6ff;
+            color: var(--secondary);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* Print Button */
+        .no-print {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .btn-print {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.2s;
+        }
+
+        .btn-print:hover {
+            background: #1e293b;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+                font-size: 12pt;
+            }
+
+            .resume-container {
+                box-shadow: none;
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .no-print {
+                display: none;
+            }
+
+            a {
+                text-decoration: none;
+                color: var(--text);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="no-print">
+        <button onclick="window.print()" class="btn-print"><i class="fas fa-print"></i> Print / Save as PDF</button>
+        <a href="index.html"
+            style="margin-left: 20px; color: var(--primary); text-decoration: none; font-weight: 500;">&larr; Back to
+            Portfolio</a>
+    </div>
+
+    <div class="resume-container">
+
+        <header>
+            <div class="header-left">
+                <h1>Brian Daum</h1>
+                <h2>Data Scientist @ Google</h2>
+            </div>
+            <div class="header-right">
+                <div><i class="fas fa-map-marker-alt"></i> Austin, TX</div>
+                <div><i class="fab fa-linkedin"></i> linkedin.com/in/briandaum</div>
+                <!-- Email placeholder -->
+                <div><i class="fas fa-envelope"></i> bpdaum@gmail.com</div>
+                <div><i class="fab fa-github"></i> github.com/bpdaum</div>
+            </div>
+        </header>
+
+        <section>
+            <div class="section-title">Summary</div>
+            <p style="color: #475569; margin-bottom: 0;">
+                Data scientist with extensive experience in translating complex HR problems into shipped products and
+                insights for leaders. Expert Python developer with extensive experience in natural language processing
+                (including transformers and LLMs), deep learning, time series forecasting, and "classic" ML solutions.
+            </p>
+        </section>
+
+        <section>
+            <div class="section-title">Skills</div>
+            <div class="skills-list">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Machine Learning</span>
+                <span class="skill-tag">Deep Learning</span>
+                <span class="skill-tag">Large Language Models (LLM)</span>
+                <span class="skill-tag">NLP</span>
+                <span class="skill-tag">RAG Systems</span>
+                <span class="skill-tag">TensorFlow/Keras</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">Time Series Forecasting</span>
+                <span class="skill-tag">Data Visualization</span>
+                <span class="skill-tag">HR Domain Knowledge</span>
+                <span class="skill-tag">Supervised Learning</span>
+                <span class="skill-tag">Unsupervised Learning</span>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-title">Experience</div>
+
+            <!-- Google - Business Data Scientist -->
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Business Data Scientist</div>
+                        <div class="company">Google</div>
+                    </div>
+                    <div style="text-align: right;">
+                        <div class="job-date">Mar 2024 - Present</div>
+                        <div class="job-location">Austin, TX</div>
+                    </div>
+                </div>
+                <div class="job-desc">
+                    Builds applied AI solutions for People Operations. Develops, implements, and productionizes NLP
+                    applications (LLMs, RAG systems, agentic solutions), scaled time series forecasting (convolutional
+                    networks and RNN’s), anomaly detection mechanisms, and more. Partner and drive analyst education on
+                    machine learning and AI.
+                </div>
+                <!-- <div class="job-skills">AI, LLMs, TensorFlow, Python, SQL</div> -->
+            </div>
+
+            <!-- Google - Analytical Lead -->
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Analytical Lead, Talent Movement and Retention</div>
+                        <div class="company">Google</div>
+                    </div>
+                    <div style="text-align: right;">
+                        <div class="job-date">May 2022 - Mar 2024</div>
+                        <div class="job-location">Austin, TX</div>
+                    </div>
+                </div>
+                <div class="job-desc">
+                    Analytical lead within People Operations Reporting & Insights, focused on machine learning products
+                    and inferential analysis for talent movement and retention. Owner of scaled attrition reporting
+                    solutions across all of Google’s product lines and functions. Developed ML models to forecast
+                    attrition and talent movement across Google.
+                </div>
+            </div>
+
+            <!-- Whole Foods -->
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Senior Data Scientist, HR</div>
+                        <div class="company">Whole Foods Market</div>
+                    </div>
+                    <div style="text-align: right;">
+                        <div class="job-date">Mar 2020 - May 2022</div>
+                        <div class="job-location">Austin, TX</div>
+                    </div>
+                </div>
+                <div class="job-desc">
+                    Owner of the data science arm of the Team Member Insights team. Responsible for performing
+                    inferential analysis and building predictive products, including NLP (sentiment, topic tagging),
+                    turnover forecasting, and program evaluation. Owned broader AI/ML strategy for HR. Driver of
+                    quarterly HR business review.
+                </div>
+            </div>
+
+            <!-- Intuit -->
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Senior HR Business Data Analyst</div>
+                        <div class="company">Intuit</div>
+                    </div>
+                    <div style="text-align: right;">
+                        <div class="job-date">Jan 2017 - Feb 2020</div>
+                        <div class="job-location">Plano, TX</div>
+                    </div>
+                </div>
+                <div class="job-desc">
+                    Acting business data analyst for Talent Development and Performance. Used Python/R for inferential
+                    analysis, regression, and PCA. Leveraged NLP for unstructured data insights (LSA, topic modeling).
+                    Created supervised/unsupervised models for predictions. Partnered with IT for dashboarding (Qlik).
+                </div>
+            </div>
+
+            <!-- Yum! Brands - People Data Analyst -->
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">People Data Analyst</div>
+                        <div class="company">Yum! Brands</div>
+                    </div>
+                    <div style="text-align: right;">
+                        <div class="job-date">Apr 2016 - Dec 2016</div>
+                        <div class="job-location">Plano, TX</div>
+                    </div>
+                </div>
+                <div class="job-desc">
+                    Developed analytics using R and Python for global HR programs. Built predictive models for turnover
+                    risk and hiring. Used NLP for employee comments. Automated processes saving 200+ labor hours
+                    annually.
+                </div>
+            </div>
+
+            <!-- Yum! Brands - Total Rewards -->
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Total Rewards/HRIS Analyst</div>
+                        <div class="company">Yum! Brands</div>
+                    </div>
+                    <div style="text-align: right;">
+                        <div class="job-date">Dec 2013 - Mar 2016</div>
+                        <div class="job-location">Plano, TX</div>
+                    </div>
+                </div>
+                <div class="job-desc">
+                    Supported KFC/Pizza Hut international markets. Led global Year End compensation processes.
+                    Implemented global HR analytics programs. Programmed Excel VBA tools to streamline processes.
+                </div>
+            </div>
+
+            <!-- CEB -->
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Technical Analyst / Project Analyst</div>
+                        <div class="company">CEB (now Gartner)</div>
+                    </div>
+                    <div style="text-align: right;">
+                        <div class="job-date">Nov 2012 - Dec 2013</div>
+                        <div class="job-location">Rolling Meadows, IL</div>
+                    </div>
+                </div>
+                <div class="job-desc">
+                    Managed and analyzed survey data for Fortune 1000 clients using SQL and Access. Streamlined internal
+                    processes and managed engagement survey projects.
+                </div>
+            </div>
+
+            <!-- Allstate -->
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">HR Professional - Executive Compensation</div>
+                        <div class="company">Allstate Insurance</div>
+                    </div>
+                    <div style="text-align: right;">
+                        <div class="job-date">Feb 2012 - Oct 2012</div>
+                        <div class="job-location">Northbrook, IL</div>
+                    </div>
+                </div>
+                <div class="job-desc">
+                    Administered the bonus program, performed pay structure analyses, and supported the technology team
+                    in platform creation.
+                </div>
+            </div>
+
+            <!-- NTTA -->
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Compensation/Benefits Support Analyst</div>
+                        <div class="company">North Texas Tollway Authority</div>
+                    </div>
+                    <div style="text-align: right;">
+                        <div class="job-date">Mar 2010 - Jan 2012</div>
+                        <div class="job-location">Dallas, TX</div>
+                    </div>
+                </div>
+                <div class="job-desc">
+                    Analyzed job descriptions, compensation surveys, flsa testing, and benefits administration.
+                </div>
+            </div>
+        </section>
+
+
+
+        <section>
+            <div class="section-title">Education</div>
+
+            <div class="education-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Emory University</div>
+                        <div class="company">Bachelor of Arts, Psychology</div>
+                    </div>
+                    <div style="text-align: right;">
+                        <div class="job-date">2005 - 2009</div>
+                    </div>
+                </div>
+                <div class="job-desc">
+                    Activities: Delta Tau Delta Fraternity, Dooley Noted A Cappella.<br>
+                    Relevant Coursework: Microeconomics, Macroeconomics, Business and Research Statistics, Financial
+                    Accounting, Organization and Management, Social Psychology.
+                </div>
+            </div>
+
+            <div class="education-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">St. Mark's School of Texas</div>
+                        <div class="company">High School Diploma</div>
+                    </div>
+                    <div style="text-align: right;">
+                        <div class="job-date">1997 - 2005</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-title">Licenses & Certifications</div>
+
+            <div class="education-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Deep Learning Specialization</div>
+                        <div class="company">DeepLearning.AI</div>
+                    </div>
+                    <div style="text-align: right;">
+                        <div class="job-date">Issued Jun 2024</div>
+                    </div>
+                </div>
+                <div class="job-desc">
+                    Credential ID: 65Y34S6DPY27
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+
+</html>
